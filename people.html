@@ -1,0 +1,363 @@
+
+
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<!-- SlidesJS Required (if responsive): Sets the page width to the device width. -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- End SlidesJS Required -->
+<title>CLIMTREE</title>
+<link rel="stylesheet" href="css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
+<link href="lightbox/css/lightbox.css" rel="stylesheet" />
+<link href='http://fonts.googleapis.com/css?family=Open+Sans|Baumans' rel='stylesheet' type='text/css'>
+
+<script src="js/modernizr.js"></script>
+<script src="js/respond.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+<script src="lightbox/js/lightbox.js"></script>
+<script src="js/prefixfree.min.js"></script>
+<script src="js/jquery.slides.min.js"></script>
+<script src="js/script.js"></script>
+
+<!--[if lt IE 9]>
+	<style>
+    	header
+        {
+        	margin: 0 auto 20px auto;
+        }
+        #four_columns .img-item figure span.thumb-screen
+        {
+       		display:none;
+        }  
+    </style>
+<![endif]-->
+
+
+<script>
+$(function() {
+  $('#slides').slidesjs({	
+	height: 300,
+	navigation: false,
+	pagination: false,
+	effect: {
+	  fade: {
+		speed: 400
+	  }
+	},
+	callback: {
+		start: function(number)
+		{			
+			$("#slider_content1,#slider_content2,#slider_content3").fadeOut(500);
+		},
+		complete: function(number)
+		{			
+			$("#slider_content" + number).delay(500).fadeIn(1000);
+		}		
+	},
+	play: {
+		active: false,
+		auto: true,
+		interval: 9000,
+		pauseOnHover: false
+	}
+  });
+});
+</script>
+</head>
+
+<body>
+<header>	
+    <h1>CLIMTREE</h1>
+    <p style="text-align:left">Ecological and socioeconomic impacts of climate-induced tree diebacks in highland forests</p>    
+
+<div id="iefix">
+<nav>   
+<ul>     
+<li><a href="/Users/vivaksoni1/Desktop/cws/contact.html">Contact</a></li>    
+ <!--Add a class to the list item with the drop menu-->     
+   
+  <!--Add a class to the list item with the drop menu-->    
+     
+   <li><a href="/Users/vivaksoni1/Desktop/cws/publications.html">Publications</a></li>   
+   <li class="dropbutton"><a href="/Users/vivaksoni1/Desktop/cws/people.html">People</a>       
+   <!--Add dropdown menu links before closing li tag-->       
+   <div class="droplinks">         
+   <a href="">France</a>         
+   <a href="">Germany</a>         
+   <a href="">Italy</a>  
+   <a href="">China</a>     
+   </div>     
+   </li>   
+ <li class="dropbutton"><a href="/Users/vivaksoni1/Desktop/cws/background.html">Background</a>       
+ <!--Add dropdown menu links before closing li tag-->       
+ <div class="droplinks">         
+ <a href="">Aims</a>         
+ <a href="">Field Sampling</a>         
+ <a href="">Wet Lab</a>   
+ <a href="">Bioinformatics</a> 
+ <a href="">Socio-Economic Consequences</a>     
+ </div>    
+  </li>     
+   <li><a href="/Users/vivaksoni1/Desktop/cws/index.html">Home</a></li>   
+   </ul> 
+   </nav> 
+</div>
+
+<!-- 
+	<div id="iefix">
+	<ul>
+  <li><a class="active" href="#home">Home</a></li>
+  <li><a href="#news">News</a></li>
+  <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn" onclick="myFunction()">Dropdown</a>
+    <div class="dropdown-content" id="myDropdown">
+      <a href="#">Link 1</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
+    </div>
+  </li>
+  <li class="dropdown2">
+    <a href="javascript:void(0)" class="dropbtn" onclick="myFunction()">Dropdown</a>
+    <div class="dropdown-content" id="myDropdown2">
+      <a href="#">knkj</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
+    </div>
+  </li>
+
+</ul>
+</div>
+ -->
+<!-- 
+	<nav>
+    	<h2 class="hidden">Navigation</h2>
+    	<ul>
+    	
+        	<li><a href="javascript:void(0)">Home</a></li>
+            <li><a href="javascript:void(0)">Background</a></li>
+            <li><a href="javascript:void(0)">People</a></li>
+            <li><a href="javascript:void(0)">Publications</a></li>
+            <li><a href="javascript:void(0)">Contact</a></li>
+        </ul>
+        
+    </nav>
+ -->
+</header>
+<!-- 
+<section class="container">
+	<h2 class="hidden">Lorem Ipsum</h2>
+	<article id="slider_content1">
+    	<h3>Effects of climate change</h3>
+        <p>Climate change affects mountain forests by increasing the intensity and frequency of disturbances such as 
+        drought, insect and pathogen outbreaks, fire, wind and ice storms. As a result widespread tree mortality has
+        been reported in recent decades. 
+     <a href="javascript:void(0)" class="responsive_button">Mehr lesen...</a></p>
+        <a class="button" href="javascript:void(0)">Learn More</a>
+    </article>
+    <article id="slider_content2">
+    	<h3>Forest die-back</h3>
+        <p>Most mountain forests support a rich community of organisms, so the loss or replacement of any tree species
+         implies a change in species composition and a financial 
+         and economic cost. <a href="javascript:void(0)" class="responsive_button">Mehr lesen...</a></p>
+        <a class="button" href="javascript:void(0)">Learn More</a>
+    </article>
+    <article id="slider_content3">
+    	<h3>Quantifying change</h3>
+        <p>To study the impact of climate change and forest management on the biodiversity of highland forests, 
+        we quantify changes in species richness and composition of a wide range of terrestrial and freshwater 
+        organisms, along tree-dieback gradients of four highland conifers in European
+         and Chinese mountains. <a href="javascript:void(0)" class="responsive_button">Mehr lesen...</a></p>
+        <a class="button" href="javascript:void(0)">Learn More</a>
+    </article>
+    <div id="slides">
+    	<img src="img/slide3.jpg" alt="Photo by: Mike Ranweiler Link: http://www.flickr.com/photos/27874907@N04/4833059991/">
+        <img src="img/slide2.jpg" alt="Photo by: Daniel Parks Link: http://www.flickr.com/photos/parksdh/5227623068/">    	
+        <img src="img/slide1.jpg" alt="Photo by: Missy S Link: http://www.flickr.com/photos/listenmissy/5087404401/">
+    </div>
+</section>
+ -->
+
+<section id="spacer">
+	<h2 class="hidden">Dolor sit amet</h2>
+	<p>Developing a biomonitoring pipeline to 
+measure how climate change impacts biodiversity and socio-economic 
+activities in mountain forests
+</p>
+<!-- 
+    <div class="search">
+        <form action="#">
+            <input type="text" name="sitesearch" value="Enter a word..."/>
+            <input type="submit" name="start_search" class="button" value="Search"/>
+        </form>
+    </div>
+ -->
+</section>
+
+<!-- 
+<section id="boxcontent">
+	<h2 class="hidden">Adipiscing</h2>
+    <article>    	    	
+        <img src="img/Buzz-Private-icon.png" alt="alt text about the private icon"/>       
+        <h3>Lorem ipsum</h3>
+        <p>        	
+            Eines Tages aber beschloß eine kleine Zeile Blindtext, ihr Name war Lorem Ipsum, hinaus zu gehen. 
+        </p>
+    </article>
+    <article>    	
+        <img src="img/Industry-Engineering-icon.png" alt="alt text about the engineering icon"/>        
+        <h3>Consectetuer</h3>
+        <p>        	
+            Der große Oxmox riet ihr davon ab, da es dort wimmele von bösen Kommata, wilden Fragezeichen...
+        </p>
+    </article>
+    <article>    	
+    	<img src="img/Cell-Phones-Iphone-icon.png" alt="alt text about the iphone icon"/>        
+        <h3>Dolor sit amet</h3>
+        <p>        	
+            Es packte seine sieben Versalien, schob sich sein Initial in den Gürtel und machte sich auf den Weg.
+        </p>
+    </article>
+
+    <br class="clear"/>
+</section>
+ -->
+
+<!-- 
+<section id="four_columns">
+	<h2>
+    	Lorem ipsum
+    </h2>    
+    <article class="img-item">
+    	<h3 class="hidden">Dolor sit amet</h3>
+    	<figure>  
+    		<a href="img/example-slide-1.jpg" rel="lightbox" title="Field Sampling">
+            	<span class="thumb-screen"></span>
+            	<img src="img/example-slide-1sml.jpg" alt="Field Sampling"/>
+            </a>
+            <figcaption>
+            	<strong>
+                	Field Sampling
+                </strong>
+                Multiple sample sites using polytraps etc
+            </figcaption>
+        </figure>
+    </article>
+    <article class="img-item">
+    	<h3 class="hidden">Sit Amet</h3>
+    	<figure>
+            <a href="img/example-slide-2.jpg" rel="lightbox" title="Photo by: Daniel Parks">
+                <span class="thumb-screen"></span>
+                <img src="img/example-slide-2sml.jpg" alt="Photo by: Daniel Parks Link: http://www.flickr.com/photos/parksdh/5227623068/"/>
+            </a>
+            <figcaption>
+                <strong>
+                    Wet Lab
+                </strong>
+                Next generation sequencing 
+            </figcaption>
+        </figure>
+    </article>
+    <article class="img-item">
+    	<h3 class="hidden">Dolor Sit</h3>
+    	<figure>
+            <a href="img/example-slide-3.jpg" rel="lightbox" title="Photo by: Mike Ranweiler">
+                <span class="thumb-screen"></span>
+                <img src="img/example-slide-3sml.jpg" alt="Photo by: Mike Ranweiler Link: http://www.flickr.com/photos/27874907@N04/4833059991/"/>
+            </a>
+            <figcaption>
+                <strong>
+                    Bioinformatics
+                </strong>
+                OBItools etc
+            </figcaption>
+        </figure>
+    </article>
+ -->
+    <!-- 
+<article class="img-item">
+    	<h3 class="hidden">Lorem Ipsum</h3>
+    	<figure>
+            <a href="img/example-slide-4.jpg" rel="lightbox" title="Photo by: Stuart SeegerLink">
+                <span class="thumb-screen"></span>
+                <img src="img/example-slide-4sml.jpg" alt="Photo by: Stuart SeegerLink: http://www.flickr.com/photos/stuseeger/97577796/"/>
+            </a>
+            <figcaption>
+                <strong>
+                    Photo by: Stuart Seeger
+                </strong>
+                Wehmütig lief ihm eine rhetorische Frage über die Wange.
+            </figcaption>
+        </figure>
+    </article>
+ -->
+    <br class="clear"/>
+</section>
+
+<!-- 
+<section id="text_columns">
+	<h2 class="hidden">Blindtext</h2>
+	<article class="column1">    
+        <h3>
+            ClimTree aims to deliver a new toolbox for forest management
+        </h3>
+        <p>To bridge the science-practitioner gap by providing stakeholders with a new biomonitoring 
+        pipeline that will be simple to use and provide an affordable, reliable, and verifiable way of 
+        monitoring forest biodiversity at a large geographical scale. Since species observed in our surveys 
+        are mostly unknown to forest managers and owners interviewed in the socioeconomic part of the project, 
+        a specific knowledge transfer will have to be planned in collaboration with social scientists. This 
+        translation of scientific advances into operational, technical and pragmatic recommendations will be 
+        framed in a collaborative way with all involved partners (scientists and stakeholders) to negotiate the 
+        better trade-off between ecological and economic objectives.</p>
+            
+            <p>To recommend more specific policy actions based on the findings of the socio-economic study in
+             particular in the field of i) economic incentives for forest owners and managers; ii) negotiated
+              regulations for a better integration of biodiversity stakes in forest management; iii) revision 
+              of extension programmes contents focused on forest dieback adaptation and dead wood biodiversity 
+              in forest management.
+</p>
+    </article>
+    <section class="column2">
+    	<h3 class="hidden">Lorem Impsum</h3>
+    	<article class="row">  
+        	<h4 class="hidden">Dolor sit</h4>      	
+        	<img src="img/Objects-Rocket-icon.png" width="80" class="rocket" alt="rocket"/>            
+        	<p>Und wenn es nicht umgeschrieben wurde, dann benutzen Sie es immernoch.</p>
+        </article> 
+        <article class="row">        	
+            <h4 class="hidden">Ipsum</h4>
+            <img src="img/Measurement-Units-Time-icon.png" class="clock" width="80" alt="time"/>            
+        	<p>Doch alles Gutzureden konnte es nicht überzeugen und so dauerte es nicht lange.</p>
+        </article>   
+    </section>
+</section>
+ -->
+<footer>
+	<h2 class="hidden">Our footer</h2>
+    <section id="copyright">
+    	<h3 class="hidden">Copyright notice</h3>
+        <div class="wrapper">
+        Email: climtree@email.com
+        	<div class="social">
+        	Follow us on Twitter 
+            	<a href="javascript:void(0)"><img src="img/twitter-image.png" alt="google plus" width="25"/></a>
+
+        </div>
+    </section>
+    <section class="wrapper">
+        <article class="column">
+        	
+<a class="twitter-timeline" data-width="800" data-height="250" href="https://twitter.com/search?q=%40climtree" data-widget-id="789165443701506048" align="right">Tweets about @climtree</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>        </article>
+        
+
+        </article>        
+    </section>
+
+
+</footer>
+</body>
+</html>
+
+
